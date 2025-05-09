@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    height: auto;
+    overflow: auto;
+    background-color: #000;
+}
+
+.font-pacifico {
+    font-family: 'Pacifico', cursive;
+}
+
+.glassmorphism-bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 5;
+}
+
+.background-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 4.5rem;
+    /* Reduced from ~5rem */
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 0%;
+}
+
+h2 {
+    font-size: 6.3rem;
+    /* Reduced from ~7rem */
+    font-weight: 800;
+    color: #56d6e0;
+    line-height: 1;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    margin: 0;
+    margin-top: 0%;
+}
+
+.code-snippet {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1rem;
+    /* Reduced from 1.125rem */
+    color: #d1d5db;
+    text-align: left;
+    max-width: 28rem;
+    margin: 1.5rem auto 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+
+.cta-button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgba(86, 214, 224, 0.2);
+    border: 2px solid #56d6e0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(86, 214, 224, 0.5);
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(86, 214, 224, 0.8);
+}
+
+.cta-button:hover {
+    background-color: rgba(86, 214, 224, 0.3);
+    box-shadow: 0 0 20px rgba(86, 214, 224, 0.8), 0 0 30px rgba(86, 214, 224, 0.6);
+    transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 4.5rem;
+    }
+
+    .code-snippet {
+        font-size: 0.9rem;
+        max-width: 22rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .content {
+        padding: 0.5rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        height: auto;
+        overflow: auto;
+    }
+
+    .content {
+        height: auto;
+        padding: 1rem 0.75rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .code-snippet {
+        font-size: 0.8rem;
+        max-width: 100%;
+        padding: 0.5rem 0.75rem;
+        margin: 1rem auto 0 auto;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+        width: 100%;
+        max-width: 300px;
+        box-sizing: border-box;
+    }
+}
+
+.footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Source Code Pro', monospace;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 128, 0.3);
+}
+
+.btn i {
+    font-size: 18px;
+}
+
+.download-resume-btn {
+    background: rgba(10, 102, 194, 0.15);
+    border: 1px solid rgba(10, 102, 194, 0.5);
+    box-shadow: 0 0 10px rgba(10, 102, 194, 0.3);
+}
+
+.download-resume-btn:hover {
+    background: rgba(10, 102, 194, 0.25);
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.7);
+}

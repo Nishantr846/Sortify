@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>$ORTiFY - Sorting Visualization</title>
+    <link rel="stylesheet" href="sortify.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="index.html"><button class="logo">$ORTiFY</button></a>
+
+            <form id="sortForm" class="glass form">
+                <label for="algo">Choose Algo
+                    <select id="algo" name="algo">
+                        <option value="bubble">Bubble Sort</option>
+                        <option value="selection">Selection Sort</option>
+                        <option value="insertion">Insertion Sort</option>
+                        <option value="merge">Merge Sort</option>
+                        <option value="quick">Quick Sort</option>
+                        <option value="heap">Heap Sort</option>
+                        <option value="shell">Shell Sort</option>
+                        <option value="counting">Counting Sort</option>
+                        <option value="radix">Radix Sort</option>
+                        <option value="bucket">Bucket Sort</option>
+                    </select>
+                </label>
+
+                <label for="size">Enter size:
+                    <input id="size" name="size" type="number" min="5" max="50" value="10" />
+                </label>
+
+                <label>Input Array (comma separated):</label>
+                <textarea id="inputArray" rows="4" placeholder="E.g. 5, 4, 8, 1, 45..."></textarea>
+
+                <label for="speed">Choose Speed</label>
+                <input id="speed" type="range" min="1" max="1000" value="500" />
+
+                <div class="btn-group">
+                    <button type="submit">SORT</button>
+                    <button type="button" id="stopBtn">STOP</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Main content -->
+        <div class="main">
+            <!-- Bar visualization -->
+            <div id="barContainer" class="glass bar-container"></div>
+
+            <!-- Algorithm code -->
+            <div id="algoImplementation" class="glass code-container">
+                <h2>Algorithm Code:</h2>
+                <pre id="algoCode"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="algorithms.js"></script>
+</body>
+
+</html>
